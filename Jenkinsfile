@@ -23,7 +23,7 @@ pipeline {
         stage('Check Dockerfile syntax') {
             agent { docker { image 'hadolint/hadolint' } }
             steps {
-                sh 'hadolint \${WORKSPACE}/Dockerfile:latest'
+                sh 'hadolint \${WORKSPACE}/Dockerfile'
             }
         }           
        
