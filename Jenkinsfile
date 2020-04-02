@@ -20,12 +20,12 @@ pipeline {
             }
         }
        
-       /* stage('Check Dockerfile syntax') {
+        stage('Check Dockerfile syntax') {
             agent { docker { image 'hadolint/hadolint' } }
             steps {
                 sh 'hadolint \${WORKSPACE}/simple_api/Dockerfile'
             }
-        }*/           
+        }           
        
    } 
    post {
