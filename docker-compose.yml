@@ -19,7 +19,7 @@ services:
     restart: always
 
   # fake-backend
-  battle-vumay:
+  battle-sahib:
     hostname: "battle-sahib"
     image: "sahibmartial/fake-backend:jenkinsCI"
     container_name: "battle-sahib"
@@ -35,7 +35,7 @@ services:
       - "battleboat"
     restart: always
     depends_on:
-      - "db-vumay"
+      - "db-sahib"
     volumes:
       - ./battleboat/:/etc/backend/static
 
