@@ -5,12 +5,12 @@
 pipeline {
     agent none
     stages {
-        stage('Check go syntax') {
+       /* stage('Check go syntax') {
             agent { docker { image 'eeacms/golint' } }
             steps {
                 sh 'golint  \${WORKSPACE}/main.go'
             }
-        }
+        }*/
         
 
         stage('Check docker-compose syntax') {
