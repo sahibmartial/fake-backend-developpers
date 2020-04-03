@@ -12,6 +12,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
 # Final stage:
 FROM alpine
 WORKDIR /root
-COPY --from=0 /go/src/github.com/alexandrevilain/fake-backend/app .
+COPY --from=builder /go/src/github.com/alexandrevilain/fake-backend/app .
 EXPOSE 3000
 CMD ["./app"] 
